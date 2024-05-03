@@ -1,5 +1,25 @@
 # Changelog 
 
+## Release (2024-05-03)
+
+ember-primitives 0.16.1 (patch)
+
+#### :memo: Documentation
+* `@nullvoxpopuli/dev`, `docs-app`
+  * [#303](https://github.com/universal-ember/ember-primitives/pull/303) Better nav (ember-mobile-menu, etc) ([@NullVoxPopuli](https://github.com/NullVoxPopuli))
+* `@nullvoxpopuli/dev`, `docs-app`, `ember-primitives`, `test-app`
+  * [#257](https://github.com/universal-ember/ember-primitives/pull/257) Start using Kolay ([@NullVoxPopuli](https://github.com/NullVoxPopuli))
+* `docs-app`
+  * [#300](https://github.com/universal-ember/ember-primitives/pull/300) Update docs app design ([@miguelcobain](https://github.com/miguelcobain))
+
+#### :house: Internal
+* `ember-primitives`
+  * [#298](https://github.com/universal-ember/ember-primitives/pull/298) add simple link helper ([@miguelcobain](https://github.com/miguelcobain))
+
+#### Committers: 2
+- Miguel Andrade ([@miguelcobain](https://github.com/miguelcobain))
+- [@NullVoxPopuli](https://github.com/NullVoxPopuli)
+
 ## Release (2024-04-19)
 
 ember-primitives 0.16.0 (minor)
