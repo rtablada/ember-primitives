@@ -36,6 +36,7 @@ export interface BreadcrumbRendererSignature {
         BreadcrumbContentTarget: WithBoundArgs<typeof BreadcrumbContentTarget, 'breadcrumbId'>;
       },
     ];
+    separator?: [];
   };
 }
 
@@ -121,15 +122,26 @@ export class BreadcrumbRenderer extends Component<BreadcrumbRendererSignature> {
     return childId;
   }
 
+  isLast(index: number) {
+    return this.children.length - 1 === index;
+  }
+
+  renderSeparator = (hasSeparatorBlock: boolean, index: number) => {
+    return hasSeparatorBlock && !this.isLast(index);
+  };
+
   <template>
     {{#let (uniqueId) as |id|}}
       {{#let (element (getElementTag @as)) as |El|}}
         <El {{registerBreadcrumbToMount this}} data-breadcrumb-id={{id}} ...attributes>
-          {{#each this.children as |child|}}
+          {{#each this.children as |child index|}}
             {{yield
               (hash BreadcrumbContentTarget=(component BreadcrumbContentTarget breadcrumbId=child))
               to="item"
             }}
+            {{#if (this.renderSeparator (has-block "separator") index)}}
+              {{yield to="separator"}}
+            {{/if}}
           {{/each}}
         </El>
       {{/let}}
