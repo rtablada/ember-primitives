@@ -105,6 +105,7 @@
     "app-js": {
       "./components/accordion.js": "./dist/_app_/components/accordion.js",
       "./components/avatar.js": "./dist/_app_/components/avatar.js",
+      "./components/breadcrumbs.js": "./dist/_app_/components/breadcrumbs.js",
       "./components/dialog.js": "./dist/_app_/components/dialog.js",
       "./components/external-link.js": "./dist/_app_/components/external-link.js",
       "./components/form.js": "./dist/_app_/components/form.js",
